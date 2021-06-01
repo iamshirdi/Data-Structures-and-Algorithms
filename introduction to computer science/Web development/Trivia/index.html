@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+<!-- can also use for each loop to add each event -->
+
+        <script>
+            function check0(elem)
+            {
+
+
+                if (elem.id == 'correct')
+                {
+                    var x = document.getElementById('correct')
+                    x.style.background = "green"
+                    document.getElementById('button_answer').innerHTML = "Correct!"
+                }
+                else
+                {
+                    var x = document.getElementById(elem.id)
+                    x.style.background = "red"
+                    document.getElementById('button_answer').innerHTML = "Incorrect"
+
+                }
+
+            }
+            function check()
+            {
+                var val = document.getElementById('f');
+                if (val.value == "stanford")
+                {
+                    var ans = "Correct!"
+                    val.style.background= "green"
+                }
+                else
+                {
+                    var ans = "Incorrect"
+                    val.style.background= "#ff0000";
+                }
+                document.getElementById('form_answer').innerHTML = ans
+            }
+
+            function listen()
+            {
+                document.querySelector('form').addEventListener('submit', check);
+
+            }
+            document.addEventListener('DOMContentLoaded', listen);
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What parts in cs50 are toughest ?</h3>
+                <table>
+                <tr>
+
+                    <td>
+                        <button id ="correct" onclick="check0(this)">Data Structures</button>
+                    </td>
+                    <td>
+                        <button id ="2" onclick="check0(this)">Python</button>
+                    </td>
+                    <td>
+                        <button id ="3" onclick="check0(this)">Webdevelopment</button>
+                    </td>
+
+                </tr>
+                </table>
+                <p id ="button_answer"></p>
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3> Cs50 is taught by which university?</h3>
+
+                <form onsubmit="check(); return false;">
+                <input type = "text" id = "f">
+                <input type = "submit" value="Check Answer">
+                </form>
+                <div id ="form_answer"></div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

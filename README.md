@@ -1,2 +1,2 @@
 # Data-Structures-and-Algorithms
-Understanding different data structures and algorithms
+Understanding different data structures, algorithms, web programming and computer science
