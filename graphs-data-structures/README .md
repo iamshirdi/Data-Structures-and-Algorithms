@@ -86,3 +86,14 @@
 
 <img src = "./Kosaraju Algorithm.PNG" title ="1st and 2nd pass">
 
+
+#### Dijkstram Algorithm
+- computes shortest path between source S and vertex V. assuming a path exists and non negative edge length(sell as non negative edge, buy, peofits)
+- BFS computes shortest path but only if all edges are equal length (linear time)
+- heap data structure to get alorithmic speed and mlogn time
+- heap balanced binary tree. every node must be smaller than child nodes. find minimum useful
+- extract vertices from heap instead of naive while loop (mn time)
+<img src = "./heap.PNG" title ="heap">
+
+- In Dijkstra heap we choose min the head belongs to v-x and whose tail is in x and then choose min of all local winners 
+<img src = "./dijkstra-heap.PNG" title ="dijkstra-heap">
